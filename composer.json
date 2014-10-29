@@ -1,0 +1,22 @@
+{
+    "name": "rubenvincenten/twig_php_ref",
+    "description": "Twig extension that replaces Twig_Extension_Debug (dump()) with PHP Ref",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ruben Vincenten",
+            "email": "rubenvincenten@gmail.com"
+        }
+    ],
+
+    "require": {
+        "twig/twig":"*",
+        "digitalnature/php-ref":"*@dev"
+    },
+    "autoload": {
+        "psr-0" : {
+            "Twig_" : "lib/"
+        }
+    }
+}
