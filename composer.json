@@ -1,7 +1,7 @@
 {
     "name": "rubenvincenten/twig_php_ref",
     "description": "Twig extension that replaces Twig_Extension_Debug (dump()) with PHP Ref",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "license": "proprietary",
     "authors": [
         {
