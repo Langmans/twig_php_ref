@@ -21,7 +21,7 @@ class Twig_Extension_Ref extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            'ref'=>$this->_getFunction()
+            'ref' => $this->_getFunction()
         );
     }
 
@@ -37,22 +37,7 @@ class Twig_Extension_Ref extends Twig_Extension
         }
 
         ob_start();
-
-        $count = func_num_args();
-        if (2 === $count) {
-            $vars = array();
-            foreach ($context as $key => $value) {
-                if (!$value instanceof Twig_Template) {
-                    $vars[$key] = $value;
-                }
-            }
-            r($vars);
-        } else {
-            for ($i = 2; $i < $count; $i++) {
-                r(func_get_arg($i));
-            }
-        }
-
+        r(2 === func_num_args() ? $context : array_slice(func_get_args(), 2));
         return ob_get_clean();
     }
 }
