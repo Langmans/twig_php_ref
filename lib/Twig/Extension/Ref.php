@@ -7,10 +7,10 @@ class Twig_Extension_Ref extends Twig_Extension
         return 'php-ref';
     }
 
-    protected function _getFunction($name)
+    protected function _getFunction()
     {
         return new Twig_Function_Method(
-            $this, $name, array(
+            $this, 'refFunction', array(
                 'is_safe' => array('html'),
                 'needs_context' => true,
                 'needs_environment' => true
@@ -21,7 +21,7 @@ class Twig_Extension_Ref extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            $this->_getFunction('refFunction')
+            'ref'=>$this->_getFunction()
         );
     }
 

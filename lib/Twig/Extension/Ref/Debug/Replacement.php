@@ -1,5 +1,7 @@
 <?php
-class Twig_Extension_Ref_Debug_Replacement extends Twig_Extension_Ref{
+
+class Twig_Extension_Ref_Debug_Replacement extends Twig_Extension_Ref
+{
 
     function getName()
     {
@@ -9,7 +11,7 @@ class Twig_Extension_Ref_Debug_Replacement extends Twig_Extension_Ref{
     public function getFunctions()
     {
         return array(
-            $this->_getFunction('dumpFunction')
+            'dump' => $this->_getFunction()
         );
     }
 }
